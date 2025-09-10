@@ -68,6 +68,7 @@ export default function AnimatedStats({ stats, duration = 2000 }: AnimatedStatsP
 <div id="animated-stats" className="relative grid grid-cols-1 md:grid-cols-3 gap-8 py-12">
   {/* Background GIF */}
   <div className="absolute inset-0 flex justify-center items-center z-0 pointer-events-none width-full h-full">
+    
     <Image
       src="/animation/mickey.gif"
       alt="Logo"
@@ -80,6 +81,38 @@ export default function AnimatedStats({ stats, duration = 2000 }: AnimatedStatsP
   {/* Stats content */}
   {stats.map((stat, index) => (
     <div key={index} className="relative z-10 text-center">
+                    <div
+                className="absolute -top-4 -right-4 w-3 h-3 bg-purple-400 rounded-full animate-bounce z-30"
+                style={{ animationDelay: "0s" }}
+              />
+              <div
+                className="absolute top-1/3 -left-6 w-2 h-2 bg-blue-400 rounded-full animate-bounce z-30"
+                style={{ animationDelay: "1s" }}
+              />
+              <div
+                className="absolute bottom-1/4 -right-8 w-4 h-4 bg-pink-400 rounded-full animate-bounce z-30"
+                style={{ animationDelay: "2s" }}
+              />
+              <div
+                className="absolute top-1/5 right-1/4 w-2 h-2 bg-green-400 rounded-full animate-bounce z-30"
+                style={{ animationDelay: "0.5s" }}
+              />
+              <div
+                className="absolute bottom-1/3 left-1/7 w-3 h-3 bg-yellow-400 rounded-full animate-bounce z-30"
+                style={{ animationDelay: "1.2s" }}
+              />
+              <div
+                className="absolute top-2/3 right-1/6 w-2.5 h-2.5 bg-red-400 rounded-full animate-bounce z-30"
+                style={{ animationDelay: "0.8s" }}
+              />
+              <div
+                className="absolute bottom-1/5 left-5/3 w-1.5 h-1.5 bg-purple-300 rounded-full animate-bounce z-30"
+                style={{ animationDelay: "1.5s" }}
+              />
+              <div
+                className="absolute top-1/4 left-1 w-2 h-2 bg-pink-300 rounded-full animate-bounce z-30"
+                style={{ animationDelay: "2.2s" }}
+              />
       <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-primary mb-2">
         {animatedValues[index].toLocaleString()}
         {stat.suffix || ""}

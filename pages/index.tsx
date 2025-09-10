@@ -1,6 +1,7 @@
 
 import HeroSection from "@/components/Hero";
 import HorizontalRunner from "@/components/HorizontalRunner";
+import MascotSection from "@/components/Mascot";
 
 const stat = [
   { label : "Users", value: 100 },
@@ -10,10 +11,11 @@ const stat = [
 
 export default function Home() {
   return (
-    <div>
+    <div className="overflow-hidden max-w-screen">
       <HeroSection />
       <HorizontalRunner stats={stat} duration={3000}/>
-      <HeroSection />
+      <MascotSection />
+      <HeroSection/>      
     </div>
   );
 }

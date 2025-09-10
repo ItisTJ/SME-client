@@ -39,31 +39,35 @@ export function HeroSection({ stats, duration = 3000 }: HeroSectionProps) {
   const sectionTop = sectionRef.current?.offsetTop || 0
   const relativeScroll = Math.max(scrollY - sectionTop, 0)
   const characterPosition = Math.max(100 - (relativeScroll / 500) * 100, 0)
+  const isAtLeftCorner = characterPosition <= 0
   const characterSrc =
-    scrollDirection === "down"
+    isAtLeftCorner?
+      "/animation/garfield-gato.png" :
+    (scrollDirection === "down" && !isAtLeftCorner)
       ? "/animation/garfield-gato.gif"
-      : scrollDirection === "up"
+      : (scrollDirection === "up" && !isAtLeftCorner)
       ? "/animation/garfield-gato-reverce.gif"
       : "/animation/garfield-gato.png"
 
-  const isAtLeftCorner = characterPosition <= 0
+
 
   return (
     <section
       ref={sectionRef}
-      className="relative h-screen bg-gradient-to-t from-green-950 via-black to-purple-950 overflow-hidden"
+      className="relative h-screen bg-gradient-to-t from-green-950 via-black to-purple-950 overflow-visible"
     >
       {/* Status / Stats */}
       <div className="absolute top-0 left-0 w-full h-[40%]">
         <Status stats={stats} duration={duration} />
       </div>
+      
 
       {/* Garfield Character */}
       <div
-        className="absolute bottom-10 transition-all duration-700 ease-out"
+        className="absolute bottom-30 transition-all duration-700 ease-out"
         style={{
           left: `${characterPosition}%`,
-          transform: `translateX(-50%) scale(${isAtLeftCorner ? 0 : 1})`,
+
         }}
       >
         <Image
@@ -73,7 +77,7 @@ export function HeroSection({ stats, duration = 3000 }: HeroSectionProps) {
           height={250}
           className="select-none transition-transform duration-700 ease-in-out"
         />
-        <div className="h-full w-[400%] rounded-xl bg-black border-2 border-purple-600 absolute top-0 left-[260px]">
+        <div className="h-full w-[400%] rounded-xl bg-black border-2 border-purple-600 absolute md:top-0 md:left-[260px] sm:top-260px sm:left-[260px] top-[300px] left-[260px] p-4 flex items-center justify-center shadow-lg shadow-purple-500/50">
           <div className="space-y-6 mt-6 ml-auto mr-auto justify-center p-4">
               <h1 className="text-3xl lg:text-5xl font-bold tracking-tight leading-tight">
                 We offer{" "}
@@ -88,11 +92,43 @@ export function HeroSection({ stats, duration = 3000 }: HeroSectionProps) {
               </p>
             </div>
         </div>
+        <div className="absolute top-0 left-[1300px] w-full h-full" >
+                        <div
+                className="absolute -top-4 -right-4 w-3 h-3 bg-purple-400 rounded-full animate-bounce z-30"
+                style={{ animationDelay: "0s" }}
+              />
+              <div
+                className="absolute top-1/3 -left-6 w-2 h-2 bg-blue-400 rounded-full animate-bounce z-30"
+                style={{ animationDelay: "1s" }}
+              />
+              <div
+                className="absolute bottom-1/4 -right-8 w-4 h-4 bg-pink-400 rounded-full animate-bounce z-30"
+                style={{ animationDelay: "2s" }}
+              />
+              <div
+                className="absolute top-1/5 right-1/4 w-2 h-2 bg-green-400 rounded-full animate-bounce z-30"
+                style={{ animationDelay: "0.5s" }}
+              />
+              <div
+                className="absolute bottom-1/3 left-1/7 w-3 h-3 bg-yellow-400 rounded-full animate-bounce z-30"
+                style={{ animationDelay: "1.2s" }}
+              />
+              <div
+                className="absolute top-2/3 right-1/6 w-2.5 h-2.5 bg-red-400 rounded-full animate-bounce z-30"
+                style={{ animationDelay: "0.8s" }}
+              />
+              <div
+                className="absolute bottom-1/5 left-5/3 w-1.5 h-1.5 bg-purple-300 rounded-full animate-bounce z-30"
+                style={{ animationDelay: "1.5s" }}
+              />
+              <div
+                className="absolute top-1/4 left-1 w-2 h-2 bg-pink-300 rounded-full animate-bounce z-30"
+                style={{ animationDelay: "2.2s" }}
+              />
+        </div>
 
       </div>
 
-      {/* Ground line */}
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gray-300"></div>
     </section>
   )
 }
