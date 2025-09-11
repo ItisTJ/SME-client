@@ -75,7 +75,7 @@ export default function HeroSection() {
                   alt="Logo"
                   width={350}
                   height={350}
-                  className="absolute"
+                  className="absolute w-[200px] sm:w-[350px] h-[200px] sm:h-[350px] object-contain"
                 />
               </div>
 

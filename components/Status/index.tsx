@@ -66,17 +66,6 @@ export default function AnimatedStats({ stats, duration = 2000 }: AnimatedStatsP
 
   return (
 <div id="animated-stats" className="relative grid grid-cols-1 md:grid-cols-3 gap-8 py-12">
-  {/* Background GIF */}
-  <div className="absolute inset-0 flex justify-center items-center z-0 pointer-events-none width-full h-full">
-    
-    <Image
-      src="/animation/mickey.gif"
-      alt="Logo"
-      width={450}
-      height={450}
-      className="w-40 sm:w-60 md:w-72 lg:w-96 h-auto opacity-20"
-    />
-  </div>
 
   {/* Stats content */}
   {stats.map((stat, index) => (

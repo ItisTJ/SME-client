@@ -1,7 +1,8 @@
 
+import DetailedServices from "@/components/DetailedServices";
 import HeroSection from "@/components/Hero";
 import HorizontalRunner from "@/components/HorizontalRunner";
-import MascotSection from "@/components/Mascot";
+import Slider from "@/components/Slider";
 
 const stat = [
   { label : "Users", value: 100 },
@@ -14,8 +15,8 @@ export default function Home() {
     <div className="overflow-hidden max-w-screen">
       <HeroSection />
       <HorizontalRunner stats={stat} duration={3000}/>
-      <MascotSection />
-      <HeroSection/>      
+      <Slider /> 
+      <DetailedServices />   
     </div>
   );
 }
