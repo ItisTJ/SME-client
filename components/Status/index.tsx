@@ -102,11 +102,11 @@ export default function AnimatedStats({ stats, duration = 2000 }: AnimatedStatsP
                 className="absolute top-1/4 left-1 w-2 h-2 bg-pink-300 rounded-full animate-bounce z-30"
                 style={{ animationDelay: "2.2s" }}
               />
-      <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-primary mb-2">
+      <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-2">
         {animatedValues[index].toLocaleString()}
         {stat.suffix || ""}
       </div>
-      <div className="text-lg sm:text-xl md:text-2xl text-muted-foreground font-medium">
+      <div className="text-lg sm:text-xl md:text-2xl text-gray-400 font-medium">
         {stat.label}
       </div>
     </div>

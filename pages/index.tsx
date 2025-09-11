@@ -12,7 +12,7 @@ const stat = [
 
 export default function Home() {
   return (
-    <div className="overflow-hidden max-w-screen">
+    <div className="overflow-hidden max-w-screen bg-black">
       <HeroSection />
       <HorizontalRunner stats={stat} duration={3000}/>
       <Slider /> 

@@ -121,7 +121,7 @@ export default function DetailedServices() {
   const displayedServices = showAll ? detailedServicesData : detailedServicesData.slice(0, 3)
 
   return (
-    <section className="py-16 bg-background">
+    <section className="py-16 bg-gradient-to-b from-purple-900/20 via-black to-green-900/20">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-12">
@@ -135,7 +135,7 @@ export default function DetailedServices() {
         {/* Services Grid */}
         <div className="space-y-8 mb-12">
           {displayedServices.map((service, index) => (
-            <Card key={service.id} className="overflow-hidden border-border/50">
+            <Card key={service.id} className="overflow-hidden border-border/50 ">
               <CardContent className="p-0">
                 <div className={`grid lg:grid-cols-2 gap-0 ${index % 2 === 1 ? "lg:grid-flow-col-dense" : ""}`}>
                   {/* Image Section */}

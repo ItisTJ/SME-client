@@ -87,14 +87,17 @@ export default function ServicesSlider() {
   }
 
   return (
-    <section className="py-16 bg-gradient-to-b from-green-950 via-black to-gray-950">
-      <div className="container mx-auto px-4">
+    <section className="py-16 bg-gradient-to-b from-green-800/20 via-black via-green-900/20 to-purple-900/20">
+      <div className="container mx-auto px-4 overflow-visible">
         {/* Section Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Services</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+        <div className="text-center mb-12 md:mb-0 md:translate-y-[-120px]">
+          <h2 className="text-3xl md:text-7xl font-bold text-white mb-4">Our Services</h2>
+          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
             From corporate events to costume rentals, we provide comprehensive solutions to make your special occasions
             unforgettable and professionally managed.
+          </p>
+          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque saepe culpa exercitationem, commodi quibusdam quos aliquid similique, tempore soluta sequi error natus excepturi tenetur deserunt aspernatur dolores officiis dolore repellendus.
           </p>
         </div>
 
@@ -109,22 +112,22 @@ export default function ServicesSlider() {
             {getVisibleCards().map((service, index) => (
               <Card
                 key={`${service.id}-${currentIndex}-${index}`}
-                className="group hover:shadow-lg transition-all duration-300 border-border/50 hover:border-primary/20"
+                className="group hover:shadow-lg transition-all duration-300 border-purple-900 border-2 hover:scale-[105%] hover:shadow-md hover:shadow-purple-950 transition-transform duration-500 ease-in-out"
               >
                 <CardContent className="p-0">
                   <div className="relative overflow-hidden rounded-t-lg">
                     <Image
                       src={service.image || "/placeholder.svg"}
                       alt={service.title}
-                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-48 object-cover group-hover:scale-108 transition-transform duration-300"
                         width={400}
                         height={200}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                   </div>
                   <div className="p-6">
-                    <h3 className="text-xl font-semibold text-foreground mb-3">{service.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+                    <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+                    <p className="text-gray-400 leading-relaxed">{service.description}</p>
                   </div>
                 </CardContent>
               </Card>
@@ -135,7 +138,7 @@ export default function ServicesSlider() {
           <div className="flex justify-center items-center gap-4">
             <button
               onClick={prevSlide}
-              className="p-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+              className="p-2 rounded-full bg-primary text-white hover:bg-primary/90 transition-colors"
               aria-label="Previous services"
             >
               <ChevronLeft className="w-5 h-5" />
@@ -157,7 +160,7 @@ export default function ServicesSlider() {
 
             <button
               onClick={nextSlide}
-              className="p-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+              className="p-2 rounded-full bg-primary text-white hover:bg-primary/90 transition-colors"
               aria-label="Next services"
             >
               <ChevronRight className="w-5 h-5" />

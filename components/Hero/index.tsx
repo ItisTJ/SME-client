@@ -8,7 +8,7 @@ export default function HeroSection() {
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden relative">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-purple-600/20 via-black to-blue-900/20 z-0" />
+      <div className="absolute inset-0 bg-gradient-to-b from-purple-600/20 via-black to-purple-1000 z-0" />
 
       {/* Hero content */}
       <div className="relative z-10 container mx-auto px-4 py-20">

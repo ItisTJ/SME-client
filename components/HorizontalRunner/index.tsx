@@ -54,7 +54,7 @@ export function HeroSection({ stats, duration = 3000 }: HeroSectionProps) {
   return (
   <section
     ref={sectionRef}
-    className="relative h-screen bg-gradient-to-t from-green-950 via-black to-purple-950 overflow-hidden"
+    className="relative h-screen bg-gradient-to-t from-green-800/20 via-purple-950 to-black overflow-hidden"
   >
     {/* Status / Stats */}
     <div className="absolute top-0 left-0 w-full h-[40%]">
@@ -63,7 +63,7 @@ export function HeroSection({ stats, duration = 3000 }: HeroSectionProps) {
 
     {/* Garfield + Text box */}
     <div
-      className="absolute bottom-10 transition-all duration-700 ease-out w-full px-4"
+      className="absolute bottom-10 md:bottom-50 transition-all duration-700 ease-out w-full px-4 "
       style={{ left: `${characterPosition}%` }}
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center max-w-6xl mx-auto">
@@ -81,10 +81,10 @@ export function HeroSection({ stats, duration = 3000 }: HeroSectionProps) {
         {/* Black Text Box */}
         <div className="w-full rounded-xl bg-black border-2 border-purple-600 flex items-center justify-center shadow-lg shadow-purple-500/50 p-6">
           <div className="space-y-6 text-center md:text-left">
-            <h1 className="text-3xl lg:text-5xl font-bold tracking-tight leading-tight">
-              We offer{" "}
+            <h1 className="text-white text-3xl lg:text-5xl font-bold tracking-tight leading-tight">
+              We offer best{" "}
               <span className="text-5xl lg:text-7xl bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
-                Best MASCOTs
+                MASCOTs
               </span>
             </h1>
 
