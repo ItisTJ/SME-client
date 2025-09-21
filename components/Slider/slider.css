@@ -1,0 +1,20 @@
+/* Flex row for smooth animation */
+.slider-row {
+  display: flex;
+  gap: 1.5rem; /* space between slides */
+  transition: transform 0.6s ease-in-out;
+}
+
+/* Card styling */
+.slider-card {
+  flex: 1;
+  min-width: 33.33%; /* 3 slides */
+  border: 2px solid #4c1d95; /* purple-900 */
+  border-radius: 12px;
+  transition: transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.slider-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 24px rgba(76, 29, 149, 0.6); /* purple glow */
+}

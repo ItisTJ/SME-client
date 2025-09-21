@@ -34,7 +34,7 @@ export default function HeroSection() {
               </p>
             </div>
 
-            <div className="flex items-center gap-8 pt-8 text-sm text-gray-400">
+            <div className="items-center gap-8 pt-8 text-sm text-gray-400 hidden md:flex ">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
                 Available 24/7

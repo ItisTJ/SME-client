@@ -54,7 +54,7 @@ export function HeroSection({ stats, duration = 3000 }: HeroSectionProps) {
   return (
   <section
     ref={sectionRef}
-    className="relative h-screen bg-gradient-to-t from-green-800/20 via-purple-950 to-black overflow-hidden"
+    className="relative min-h-[950px] bg-gradient-to-t from-green-800/20 via-purple-950 to-black overflow-hidden"
   >
     {/* Status / Stats */}
     <div className="absolute top-0 left-0 w-full h-[40%]">
@@ -63,7 +63,7 @@ export function HeroSection({ stats, duration = 3000 }: HeroSectionProps) {
 
     {/* Garfield + Text box */}
     <div
-      className="absolute bottom-10 md:bottom-50 transition-all duration-700 ease-out w-full px-4 "
+      className="absolute bottom-10 md:bottom-60 transition-all duration-700 ease-out w-full px-4 "
       style={{ left: `${characterPosition}%` }}
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center max-w-6xl mx-auto">

@@ -2,9 +2,7 @@
 
 import type React from "react"
 
-import { useState } from "react"
 import { Card, CardContent } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
 import { Calendar, Users, Palette, Music, Camera, Sparkles } from "lucide-react"
 import Image from "next/image"
 
@@ -117,8 +115,6 @@ const detailedServicesData: DetailedService[] = [
 ]
 
 export default function DetailedServices() {
-  const [showAll, setShowAll] = useState(false)
-  const displayedServices = showAll ? detailedServicesData : detailedServicesData.slice(0, 3)
 
   return (
     <section className="py-16 bg-gradient-to-b from-purple-900/20 via-black to-green-900/20">
@@ -134,7 +130,7 @@ export default function DetailedServices() {
 
         {/* Services Grid */}
         <div className="space-y-8 mb-12">
-          {displayedServices.map((service, index) => (
+          {detailedServicesData.map((service, index) => (
             <Card key={service.id} className="overflow-hidden border-border/50 ">
               <CardContent className="p-0">
                 <div className={`grid lg:grid-cols-2 gap-0 ${index % 2 === 1 ? "lg:grid-flow-col-dense" : ""}`}>
@@ -145,7 +141,7 @@ export default function DetailedServices() {
                       height={500}
                       src={service.image || "/placeholder.svg"}
                       alt={service.title}
-                      className="w-full h-64 lg:h-full object-cover"
+                      className="w-full h-64 md:h-150 object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-r from-black/10 to-transparent" />
                   </div>
@@ -176,19 +172,6 @@ export default function DetailedServices() {
             </Card>
           ))}
         </div>
-
-        {/* Show More Button */}
-        {!showAll && detailedServicesData.length > 3 && (
-          <div className="text-center">
-            <Button
-              onClick={() => setShowAll(true)}
-              size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground px-8"
-            >
-              Show More Services
-            </Button>
-          </div>
-        )}
       </div>
     </section>
   )
