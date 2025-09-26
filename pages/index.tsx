@@ -1,13 +1,14 @@
 
 import DetailedServices from "@/components/DetailedServices";
+import Footer from "@/components/Footer";
 import HeroSection from "@/components/Hero";
 import HorizontalRunner from "@/components/HorizontalRunner";
 import Slider from "@/components/Slider";
 
 const stat = [
-  { label : "Users", value: 100 },
-  { label : "AI Agents", value: 50 },
-  { label : "Enterprise", value: 500 }
+  { label : "Mascots", value: 12 },
+  { label : "Clients", value: 100 },
+  { label : "Successful events", value: 200 }
 ]
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <HorizontalRunner stats={stat} duration={3000}/>
       <Slider /> 
       <DetailedServices />   
+      <Footer />
     </div>
   );
 }

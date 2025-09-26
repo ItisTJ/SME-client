@@ -69,11 +69,10 @@ export default function AnimatedStats({ stats, duration = 2000 }: AnimatedStatsP
   {/* Stats content */}
   {stats.map((stat, index) => (
     <div key={index} className="relative z-10 text-center border border-gray-700/50 rounded-4xl p-6 bg-black/30 backdrop-blur-sm mx-4 hover:scale-[1.08] hover:text-green transition-transform duration-300">
-      <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-2">
-        {animatedValues[index].toLocaleString()}
-        {stat.suffix || ""} +
+      <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-pink-400 mb-2">
+        {animatedValues[index].toLocaleString()} +
       </div>
-      <div className="text-lg sm:text-xl md:text-2xl text-gray-400 font-medium">
+      <div className="text-lg sm:text-xl md:text-2xl text-purple-400 font-medium">
         {stat.label}
       </div>
     </div>

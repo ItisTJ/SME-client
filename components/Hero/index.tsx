@@ -7,6 +7,9 @@ import Image from "next/image"
 export default function HeroSection() {
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden relative">
+      <div
+        className="absolute inset-0 bg-[url('/background2.png')] bg-cover bg-center opacity-60"
+      />
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-purple-600/20 via-black to-purple-1000 z-0" />
 
@@ -29,8 +32,7 @@ export default function HeroSection() {
               </h1>
 
               <p className="text-md lg:text-xl text-gray-300 leading-relaxed max-w-2xl">
-                Experience the future of productivity with an AI agent that understands you,
-                learns from you, and works tirelessly to make your life easier.
+                Where your brand’s story comes to life! Our intuitive web app powers heartfelt marketing with vibrant mascot costumes, creative campaigns, and engaging promotions. From eye-catching leaflets to lively announcers, we craft unforgettable moments that connect deeply with your audience, making every campaign a celebration of your vision.
               </p>
             </div>
 
@@ -39,8 +41,8 @@ export default function HeroSection() {
                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
                 Available 24/7
               </div>
-              <div>No setup required</div>
-              <div>Enterprise ready</div>
+              <div className="flex items-center gap-2"><div className="w-2 h-2 bg-pink-500 rounded-full animate-pulse" />Best Mascot collection</div>
+              <div className="flex items-center gap-2"><div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse" />Market yourself in the best way</div>
             </div>
           </div>
 

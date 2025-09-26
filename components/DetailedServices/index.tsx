@@ -121,8 +121,8 @@ export default function DetailedServices() {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Detailed Service Offerings</h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+          <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">Our Services</h2>
+          <p className="text-lg text-gray-400 max-w-3xl mx-auto">
             Discover the full scope of our professional services. Each offering is designed to provide exceptional value
             and memorable experiences for your special events.
           </p>
@@ -150,17 +150,17 @@ export default function DetailedServices() {
                   <div className={`p-8 lg:p-12 ${index % 2 === 1 ? "lg:order-1" : ""}`}>
                     <div className="flex items-center gap-3 mb-4">
                       <div className="p-2 rounded-lg bg-primary/10 text-primary">{service.icon}</div>
-                      <h3 className="text-2xl font-bold text-foreground">{service.title}</h3>
+                      <h3 className="text-2xl font-bold text-primary">{service.title}</h3>
                     </div>
 
-                    <p className="text-muted-foreground leading-relaxed mb-6">{service.description}</p>
+                    <p className="text-gray-400 leading-relaxed mb-6">{service.description}</p>
 
                     <div className="space-y-3">
-                      <h4 className="font-semibold text-foreground mb-3">What is Included:</h4>
+                      <h4 className="font-semibold text-gray-300 mb-3">What is Included:</h4>
                       <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
                         {service.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-start gap-2 text-sm text-muted-foreground">
-                            <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                          <li key={featureIndex} className="flex items-center gap-2 text-sm text-gray-400">
+                            <div className="w-2 h-2 bg-pink-500 rounded-full animate-pulse" />
                             {feature}
                           </li>
                         ))}

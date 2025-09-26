@@ -56,6 +56,9 @@ export function HeroSection({ stats, duration = 3000 }: HeroSectionProps) {
     ref={sectionRef}
     className="relative min-h-[950px] bg-gradient-to-t from-green-800/20 via-purple-950 to-black overflow-hidden"
   >
+    <div
+        className="absolute inset-0 bg-[url('/background1.png')] bg-cover bg-center opacity-10"
+      />
     {/* Status / Stats */}
     <div className="absolute top-0 left-0 w-full h-[40%]">
       <Status stats={stats} duration={duration} />
@@ -80,7 +83,7 @@ export function HeroSection({ stats, duration = 3000 }: HeroSectionProps) {
 
         {/* Black Text Box */}
         <div className="w-full rounded-xl bg-black border-2 border-purple-600 flex items-center justify-center shadow-lg shadow-purple-500/50 p-6">
-          <div className="space-y-6 text-center md:text-left">
+          <div className="flex flex-col space-y-6 text-center md:text-left">
             <h1 className="text-white text-3xl lg:text-5xl font-bold tracking-tight leading-tight">
               We offer best{" "}
               <span className="text-5xl lg:text-7xl bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
@@ -92,6 +95,7 @@ export function HeroSection({ stats, duration = 3000 }: HeroSectionProps) {
               Experience the future of productivity with an AI agent that understands you,
               learns from you, and works tirelessly to make your life easier.
             </p>
+            <button className="w-fit ml-auto px-6 py-3 bg-gray-800 border-2 shadow-lg shadow-pink-500/50 border-pink-600 text-white rounded-full font-semibold transition hover:cursor-pointer hover:bg-gray-300 hover:text-pink-600"> view collection </button>
           </div>
         </div>
       </div>
